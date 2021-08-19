@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - NMake Makefiles" "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/cmake-build-debug
