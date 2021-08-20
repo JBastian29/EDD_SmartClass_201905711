@@ -19,5 +19,9 @@ public:
 
     NodoDobleCircular *getCabeza();
 
+    bool verificarDPI(string _nDPI);
+    bool verificarCarnet(string _carnet);
+    bool verificarCorreo(string _correo);
+
     void setCabeza(NodoDobleCircular *_cabeza);
 };

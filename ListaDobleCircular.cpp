@@ -1,4 +1,5 @@
 #include "ListaDobleCircular.h"
+#include<regex>
 
 
 
@@ -89,6 +90,28 @@ void ListaDCircular::imprimir() {
         casoPrimero = false;
         cout<<actual->getnCarnet()<<" "<< actual->getnDPI()<<" "<< actual->getNombre()<<" "<< actual->getCarrera()<<" "<< actual->getCorreo()<<" "<< actual->getPassword()<<" "<< actual->getCreditos()<<" "<< actual->getEdad()<<endl;
     }
+}
+
+bool ListaDCircular::verificarDPI(string _nDPI) {
+    if(_nDPI.length()<13 || _nDPI.length()>13){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+bool ListaDCircular::verificarCarnet(string _carnet) {
+    if(_carnet.length()<9 || _carnet.length()>9){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+bool ListaDCircular::verificarCorreo(string _correo) {
+    const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+    return regex_match(_correo,pattern);
+
 }
 
 NodoDobleCircular *ListaDCircular::getCabeza() {

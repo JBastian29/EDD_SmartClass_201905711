@@ -29,10 +29,18 @@ string
 D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/main.cpp
 iostream
 -
+string
+-
 ListaDobleCircular.h
 D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.h
 Cola.h
 D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h
 stdlib.h
+-
+sstream
+-
+fstream
+-
+filesystem
 -
 
