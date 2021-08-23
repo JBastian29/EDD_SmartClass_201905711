@@ -82,14 +82,23 @@ void ListaDCircular::imprimir() {
     bool casoPrimero = true;
     for (NodoDobleCircular *actual = getCabeza(); actual != NULL && (casoPrimero || !actual->getPrimero()); actual = actual->getSiguiente()) {
         casoPrimero = false;
-        cout<<actual->getnCarnet()<<" "<< actual->getnDPI()<<" "<< actual->getNombre()<<" "<< actual->getCarrera()<<" "<< actual->getCorreo()<<" "<< actual->getPassword()<<" "<< actual->getCreditos()<<" "<< actual->getEdad()<<endl;
+        cout << "==================" << endl;
+        cout << "Carnet   :" << actual->getnCarnet() << endl;
+        cout << "DPI      :" << actual->getnDPI() << endl;
+        cout << "Nombre   :" << actual->getNombre() << endl;
+        cout << "Carrera  :" << actual->getCarrera() << endl;
+        cout << "Password :" << actual->getPassword() << endl;
+        cout << "Creditos :" << actual->getCreditos() << endl;
+        cout << "Edad     :" << actual->getEdad() << endl;
+        cout << "Correo   :" << actual->getCorreo() << endl;
+        //cout<<actual->getnCarnet()<<" "<< actual->getnDPI()<<" "<< actual->getNombre()<<" "<< actual->getCarrera()<<" "<< actual->getCorreo()<<" "<< actual->getPassword()<<" "<< actual->getCreditos()<<" "<< actual->getEdad()<<endl;
 
     }
     casoPrimero = true;
-    for (NodoDobleCircular *actual = getCabeza(); actual != NULL && (casoPrimero || !actual->getPrimero()); actual = actual->getSiguiente()) {
+    /*for (NodoDobleCircular *actual = getCabeza(); actual != NULL && (casoPrimero || !actual->getPrimero()); actual = actual->getSiguiente()) {
         casoPrimero = false;
         cout<<actual->getnCarnet()<<" "<< actual->getnDPI()<<" "<< actual->getNombre()<<" "<< actual->getCarrera()<<" "<< actual->getCorreo()<<" "<< actual->getPassword()<<" "<< actual->getCreditos()<<" "<< actual->getEdad()<<endl;
-    }
+    }*/
 }
 
 bool ListaDCircular::verificarDPI(string _nDPI) {
@@ -108,10 +117,20 @@ bool ListaDCircular::verificarCarnet(string _carnet) {
     }
 }
 
+bool ListaDCircular::existeCarnet(string _carnet) {
+    NodoDobleCircular *aux=getCabeza();
+    while(aux!=NULL){
+        if(aux->getnCarnet()==_carnet){
+            return true;
+        }
+        aux=aux->getSiguiente();
+    }
+    return false;
+}
+
 bool ListaDCircular::verificarCorreo(string _correo) {
     const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
     return regex_match(_correo,pattern);
-
 }
 
 NodoDobleCircular *ListaDCircular::getCabeza() {

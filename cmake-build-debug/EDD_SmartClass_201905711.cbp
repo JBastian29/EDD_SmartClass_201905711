@@ -90,6 +90,12 @@
 		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h">
 			<Option target="EDD_SmartClass_201905711"/>
 		</Unit>
+		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.cpp">
+			<Option target="EDD_SmartClass_201905711"/>
+		</Unit>
+		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.h">
+			<Option target="EDD_SmartClass_201905711"/>
+		</Unit>
 		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.cpp">
 			<Option target="EDD_SmartClass_201905711"/>
 		</Unit>
@@ -102,10 +108,22 @@
 		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.h">
 			<Option target="EDD_SmartClass_201905711"/>
 		</Unit>
+		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.cpp">
+			<Option target="EDD_SmartClass_201905711"/>
+		</Unit>
+		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.h">
+			<Option target="EDD_SmartClass_201905711"/>
+		</Unit>
 		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.cpp">
 			<Option target="EDD_SmartClass_201905711"/>
 		</Unit>
 		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.h">
+			<Option target="EDD_SmartClass_201905711"/>
+		</Unit>
+		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.cpp">
+			<Option target="EDD_SmartClass_201905711"/>
+		</Unit>
+		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.h">
 			<Option target="EDD_SmartClass_201905711"/>
 		</Unit>
 		<Unit filename="D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/main.cpp">

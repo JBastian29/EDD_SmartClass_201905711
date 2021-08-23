@@ -5,6 +5,12 @@ CMakeFiles/EDD_SmartClass_201905711.dir/Cola.cpp.obj
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.cpp
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.h
+CMakeFiles/EDD_SmartClass_201905711.dir/ListaDoble.cpp.obj
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.cpp
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.h
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.h
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.h
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.h
 CMakeFiles/EDD_SmartClass_201905711.dir/ListaDobleCircular.cpp.obj
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.cpp
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.h
@@ -12,12 +18,21 @@ CMakeFiles/EDD_SmartClass_201905711.dir/ListaDobleCircular.cpp.obj
 CMakeFiles/EDD_SmartClass_201905711.dir/NodoCola.cpp.obj
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.cpp
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.h
+CMakeFiles/EDD_SmartClass_201905711.dir/NodoDoble.cpp.obj
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.cpp
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.h
 CMakeFiles/EDD_SmartClass_201905711.dir/NodoDobleCircular.cpp.obj
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.cpp
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.h
+CMakeFiles/EDD_SmartClass_201905711.dir/NodoMatriz.cpp.obj
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.cpp
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.h
 CMakeFiles/EDD_SmartClass_201905711.dir/main.cpp.obj
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.h
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.h
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.h
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.h
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.h
+ D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.h
  D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/main.cpp

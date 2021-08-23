@@ -5,6 +5,12 @@ CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.obj: ..\Cola.cpp
 CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.obj: ..\Cola.h
 CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.obj: ..\NodoCola.h
 
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: ..\ListaDoble.cpp
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: ..\ListaDoble.h
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: ..\ListaDobleCircular.h
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: ..\NodoDoble.h
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: ..\NodoDobleCircular.h
+
 CMakeFiles\EDD_SmartClass_201905711.dir\ListaDobleCircular.cpp.obj: ..\ListaDobleCircular.cpp
 CMakeFiles\EDD_SmartClass_201905711.dir\ListaDobleCircular.cpp.obj: ..\ListaDobleCircular.h
 CMakeFiles\EDD_SmartClass_201905711.dir\ListaDobleCircular.cpp.obj: ..\NodoDobleCircular.h
@@ -12,12 +18,21 @@ CMakeFiles\EDD_SmartClass_201905711.dir\ListaDobleCircular.cpp.obj: ..\NodoDoble
 CMakeFiles\EDD_SmartClass_201905711.dir\NodoCola.cpp.obj: ..\NodoCola.cpp
 CMakeFiles\EDD_SmartClass_201905711.dir\NodoCola.cpp.obj: ..\NodoCola.h
 
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj: ..\NodoDoble.cpp
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj: ..\NodoDoble.h
+
 CMakeFiles\EDD_SmartClass_201905711.dir\NodoDobleCircular.cpp.obj: ..\NodoDobleCircular.cpp
 CMakeFiles\EDD_SmartClass_201905711.dir\NodoDobleCircular.cpp.obj: ..\NodoDobleCircular.h
 
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj: ..\NodoMatriz.cpp
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj: ..\NodoMatriz.h
+
 CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\Cola.h
+CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\ListaDoble.h
 CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\ListaDobleCircular.h
 CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\NodoCola.h
+CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\NodoDoble.h
 CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\NodoDobleCircular.h
+CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\NodoMatriz.h
 CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj: ..\main.cpp
 

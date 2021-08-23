@@ -150,13 +150,73 @@ CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.s /c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\Cola.cpp"
 <<
 
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj: CMakeFiles\EDD_SmartClass_201905711.dir\flags.make
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj: ..\NodoDoble.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EDD_SmartClass_201905711.dir/NodoDoble.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj /FdCMakeFiles\EDD_SmartClass_201905711.dir\ /FS -c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\NodoDoble.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDD_SmartClass_201905711.dir/NodoDoble.cpp.i"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\NodoDoble.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDD_SmartClass_201905711.dir/NodoDoble.cpp.s"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.s /c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\NodoDoble.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: CMakeFiles\EDD_SmartClass_201905711.dir\flags.make
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj: ..\ListaDoble.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EDD_SmartClass_201905711.dir/ListaDoble.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj /FdCMakeFiles\EDD_SmartClass_201905711.dir\ /FS -c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\ListaDoble.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDD_SmartClass_201905711.dir/ListaDoble.cpp.i"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\ListaDoble.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDD_SmartClass_201905711.dir/ListaDoble.cpp.s"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.s /c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\ListaDoble.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj: CMakeFiles\EDD_SmartClass_201905711.dir\flags.make
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj: ..\NodoMatriz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EDD_SmartClass_201905711.dir/NodoMatriz.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj /FdCMakeFiles\EDD_SmartClass_201905711.dir\ /FS -c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\NodoMatriz.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDD_SmartClass_201905711.dir/NodoMatriz.cpp.i"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\NodoMatriz.cpp"
+<<
+
+CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDD_SmartClass_201905711.dir/NodoMatriz.cpp.s"
+	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.s /c "D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\NodoMatriz.cpp"
+<<
+
 # Object files for target EDD_SmartClass_201905711
 EDD_SmartClass_201905711_OBJECTS = \
 "CMakeFiles\EDD_SmartClass_201905711.dir\main.cpp.obj" \
 "CMakeFiles\EDD_SmartClass_201905711.dir\NodoDobleCircular.cpp.obj" \
 "CMakeFiles\EDD_SmartClass_201905711.dir\ListaDobleCircular.cpp.obj" \
 "CMakeFiles\EDD_SmartClass_201905711.dir\NodoCola.cpp.obj" \
-"CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.obj"
+"CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.obj" \
+"CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj" \
+"CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj" \
+"CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj"
 
 # External object files for target EDD_SmartClass_201905711
 EDD_SmartClass_201905711_EXTERNAL_OBJECTS =
@@ -166,9 +226,12 @@ EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\NodoDobleC
 EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\ListaDobleCircular.cpp.obj
 EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\NodoCola.cpp.obj
 EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.obj
+EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj
+EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj
+EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj
 EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\build.make
 EDD_SmartClass_201905711.exe: CMakeFiles\EDD_SmartClass_201905711.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable EDD_SmartClass_201905711.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable EDD_SmartClass_201905711.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\EDD_SmartClass_201905711.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\EDD_SmartClass_201905711.dir\objects1.rsp @<<
  /out:EDD_SmartClass_201905711.exe /implib:EDD_SmartClass_201905711.lib /pdb:"D:\Sebastian Julajuj\#USAC\GitHub\EDD_SmartClass\EDD_SmartClass_201905711\cmake-build-debug\EDD_SmartClass_201905711.pdb" /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

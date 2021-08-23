@@ -142,6 +142,30 @@ Cola.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\Cola.cpp.s
 .PHONY : Cola.cpp.s
 
+ListaDoble.obj: ListaDoble.cpp.obj
+.PHONY : ListaDoble.obj
+
+# target to build an object file
+ListaDoble.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.obj
+.PHONY : ListaDoble.cpp.obj
+
+ListaDoble.i: ListaDoble.cpp.i
+.PHONY : ListaDoble.i
+
+# target to preprocess a source file
+ListaDoble.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.i
+.PHONY : ListaDoble.cpp.i
+
+ListaDoble.s: ListaDoble.cpp.s
+.PHONY : ListaDoble.s
+
+# target to generate assembly for a file
+ListaDoble.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\ListaDoble.cpp.s
+.PHONY : ListaDoble.cpp.s
+
 ListaDobleCircular.obj: ListaDobleCircular.cpp.obj
 .PHONY : ListaDobleCircular.obj
 
@@ -190,6 +214,30 @@ NodoCola.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoCola.cpp.s
 .PHONY : NodoCola.cpp.s
 
+NodoDoble.obj: NodoDoble.cpp.obj
+.PHONY : NodoDoble.obj
+
+# target to build an object file
+NodoDoble.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.obj
+.PHONY : NodoDoble.cpp.obj
+
+NodoDoble.i: NodoDoble.cpp.i
+.PHONY : NodoDoble.i
+
+# target to preprocess a source file
+NodoDoble.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.i
+.PHONY : NodoDoble.cpp.i
+
+NodoDoble.s: NodoDoble.cpp.s
+.PHONY : NodoDoble.s
+
+# target to generate assembly for a file
+NodoDoble.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoDoble.cpp.s
+.PHONY : NodoDoble.cpp.s
+
 NodoDobleCircular.obj: NodoDobleCircular.cpp.obj
 .PHONY : NodoDobleCircular.obj
 
@@ -213,6 +261,30 @@ NodoDobleCircular.s: NodoDobleCircular.cpp.s
 NodoDobleCircular.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoDobleCircular.cpp.s
 .PHONY : NodoDobleCircular.cpp.s
+
+NodoMatriz.obj: NodoMatriz.cpp.obj
+.PHONY : NodoMatriz.obj
+
+# target to build an object file
+NodoMatriz.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.obj
+.PHONY : NodoMatriz.cpp.obj
+
+NodoMatriz.i: NodoMatriz.cpp.i
+.PHONY : NodoMatriz.i
+
+# target to preprocess a source file
+NodoMatriz.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.i
+.PHONY : NodoMatriz.cpp.i
+
+NodoMatriz.s: NodoMatriz.cpp.s
+.PHONY : NodoMatriz.s
+
+# target to generate assembly for a file
+NodoMatriz.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDD_SmartClass_201905711.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\EDD_SmartClass_201905711.dir\NodoMatriz.cpp.s
+.PHONY : NodoMatriz.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -250,15 +322,24 @@ help:
 	@echo ... Cola.obj
 	@echo ... Cola.i
 	@echo ... Cola.s
+	@echo ... ListaDoble.obj
+	@echo ... ListaDoble.i
+	@echo ... ListaDoble.s
 	@echo ... ListaDobleCircular.obj
 	@echo ... ListaDobleCircular.i
 	@echo ... ListaDobleCircular.s
 	@echo ... NodoCola.obj
 	@echo ... NodoCola.i
 	@echo ... NodoCola.s
+	@echo ... NodoDoble.obj
+	@echo ... NodoDoble.i
+	@echo ... NodoDoble.s
 	@echo ... NodoDobleCircular.obj
 	@echo ... NodoDobleCircular.i
 	@echo ... NodoDobleCircular.s
+	@echo ... NodoMatriz.obj
+	@echo ... NodoMatriz.i
+	@echo ... NodoMatriz.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

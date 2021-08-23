@@ -22,6 +22,7 @@ public:
     bool verificarDPI(string _nDPI);
     bool verificarCarnet(string _carnet);
     bool verificarCorreo(string _correo);
+    bool existeCarnet(string _carnet);
 
     void setCabeza(NodoDobleCircular *_cabeza);
 };
