@@ -28,7 +28,12 @@ void modificarTareas();
 void eliminarTareas();
 void imprimirUsuario(string carnet, string dpi, string nombre, string carrera, string correo, string password, int creditos, int edad);
 void imprimirTarea(string indice,string mes,string dia,string hora,string carnet,string nombre,string descripcion,string materia,string fecha,string estado);
-
+void reporte1();
+void reporte2();
+void reporte3();
+void reporte4();
+void reporte5();
+void reporte6();
 
 using namespace std;
 
@@ -102,7 +107,7 @@ int main() {
                         ingresoManual();
                         break;
                         case 4:
-                            //reportes();
+                            reportes();
                             break;
         }
     }
@@ -912,3 +917,104 @@ void eliminarTareas(){
 
 }
 
+void reportes(){
+    int a;
+    do{
+        cout<<"******MENU PRINCIPAL******"<<endl;
+        cout<<"1-Reporte sobre lista de estudiantes"<<endl;
+        cout<<"2-Reporte sobre lista de tareas linealizadas"<<endl;
+        cout<<"3-Busqueda en estructura linealizada"<<endl;
+        cout<<"4-Busqueda de posicion en lista linealizada"<<endl;
+        cout<<"5-Cola de Errores"<<endl;
+        cout<<"6-Codigo generado de salida"<<endl;
+        cin>>a;
+
+        switch (a) {
+            case 1:
+                reporte1();
+                break;
+                case 2:
+                    reporte2();
+                    break;
+                    case 3:
+                        reporte3();
+                        break;
+                        case 4:
+                            reporte4();
+                            break;
+                            case 5:
+                                reporte5();
+                                break;
+                                case 6:
+                                    //reporte6();
+                                    break;
+        }
+    }
+    while(a!=6);
+    system("pause");
+}
+
+void reporte1(){
+    cout<<"******GENERANDO REPORTE SOBRE LISTA DE ESTUDIANTES******"<<endl;
+    listaCircu->graficarDobleCircular();
+    main();
+}
+
+void reporte2(){
+    cout<<"******GENERANDO REPORTE SOBRE LISTA DE TAREAS******"<<endl;
+    listaDoble->graficarDoble();
+    main();
+}
+
+void reporte3(){
+    int i,j,k;
+    cout<<"******BUSQUEDA DE TAREA POR COMPONENTES******"<<endl;
+    cout<<"Ingrese la componente i(mes): "<<endl;
+    cin>>i;
+    cout<<"Ingrese la componente j(dia: "<<endl;
+    cin>>j;
+    cout<<"Ingrese la componente k(hora): "<<endl;
+    cin>>k;
+    if(listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))){
+        cout<<"******TAREA ENCONTRADA******"<<endl;
+        cout << "==================" << endl;
+        cout << "ID          :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getIdTarea() << endl;
+        cout << "Indice      :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getIndice() << endl;
+        cout << "Carnet      :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getCarnet() << endl;
+        cout << "Nombre      :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getNombretarea() << endl;
+        cout << "Descripcion :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getDescripcion() << endl;
+        cout << "Materia     :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getMateria() << endl;
+        cout << "Fecha       :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getFecha() << endl;
+        cout << "Hora        :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getHora()  << endl;
+        cout << "Estado      :" << listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getEstado() << endl;
+    }else{
+        cout<<"****INDICE no encontrado, por favor revisa tus datos**** "<<endl;
+    }
+    main();
+}
+
+void reporte4(){
+    int i,j,k;
+    cout<<"******BUSQUEDA DE ID POR COMPONENTES******"<<endl;
+    cout<<"Ingrese la componente i(mes): "<<endl;
+    cin>>i;
+    cout<<"Ingrese la componente j(dia: "<<endl;
+    cin>>j;
+    cout<<"Ingrese la componente k(hora): "<<endl;
+    cin>>k;
+    if(listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))){
+        cout<<"******TAREA ENCONTRADA******"<<endl;
+        cout << "==================" << endl;
+        cout << "Iniciando la cuenta desde 0, encontramos la tarea en la posicion: "<< listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getIdTarea() <<" de la lista linealizada."<< endl;
+        cout << "Iniciando la cuenta desde 1, encontramos la tarea en la posicion: "<< listaDoble->encontradoUpdate(listaDoble->calcularIndice(getIndexMes(to_string(i)),j-1,getIndexHora(to_string(k))))->getIdTarea()+1<<" de la lista linealizada." << endl;
+    }else{
+        cout<<"****INDICE no encontrado, por favor revisa tus datos**** "<<endl;
+    }
+    main();
+}
+
+void reporte5(){
+    cout<<"******GENERANDO REPORTE DE ERRORES******"<<endl;
+    colaErrores->graficarCola();
+    main();
+}

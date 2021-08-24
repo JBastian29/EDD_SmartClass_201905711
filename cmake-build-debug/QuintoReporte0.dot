@@ -1,0 +1,22 @@
+digraph List {
+rankdir=LR;
+node [shape = record, color=black, style=filled, fillcolor=antiquewhite1];Inicio [shape = plaintext,fillcolor=white,label= ""];Final [shape = plaintext,fillcolor=white,label= ""];
+Node0[label="ID           : 1\nTipo           : Estudiante\nDescripcion        : El carnet no presenta formato debido."];
+Node1[label="ID           : 2\nTipo           : Estudiante\nDescripcion        : El DPI no presenta formato debido."];
+Node2[label="ID           : 3\nTipo           : Estudiante\nDescripcion        : El correo no presenta formato debido."];
+Node3[label="ID           : 4\nTipo           : Tarea\nDescripcion        : El numero de carnet: 201901425 no se encuentra registrado."];
+Node4[label="ID           : 5\nTipo           : Tarea\nDescripcion        : El numero de carnet: 202000786 no se encuentra registrado."];
+Node5[label="ID           : 6\nTipo           : Tarea\nDescripcion        : Mes ingresado : 6 no permitido."];
+Node6[label="ID           : 7\nTipo           : Tarea\nDescripcion        : El numero de carnet: 201901425 no se encuentra registrado."];
+Node7[label="ID           : 8\nTipo           : Tarea\nDescripcion        : Hora ingresada : 7 no permitida."];
+Inicio->Node7;
+Node7->Node6;
+Node6->Node5;
+Node5->Node4;
+Node4->Node3;
+Node3->Node2;
+Node2->Node1;
+Node1->Node0;
+Node0->Final;
+
+}

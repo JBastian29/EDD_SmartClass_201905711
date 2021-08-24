@@ -26,6 +26,7 @@ public:
 
     NodoDoble *getCabeza();
 
+    void graficarDoble();
     bool verificarFecha(string _fecha);
     bool verificarHora(string _hora);
     bool verificarDia(string _dia);

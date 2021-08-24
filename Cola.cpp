@@ -3,6 +3,7 @@
 //
 
 #include "Cola.h"
+#include <fstream>
 
 Cola::Cola() {
     setCabeza(NULL);
@@ -39,6 +40,58 @@ void Cola::imprimir() {
     }
 
 }
+
+int contAr=0;
+void Cola::graficarCola(){
+    NodoCola *aux=getCabeza();
+    string node_data = "";
+    string edge_data = "";
+    string graph = "digraph List {\nrankdir=LR;\nnode [shape = record, color=black, style=filled, fillcolor=antiquewhite1];Inicio [shape = plaintext,fillcolor=white,label= \"\"];Final [shape = plaintext,fillcolor=white,label= \"\"];\n";
+    int counter = 0;
+    int otrocont=0;
+    bool casoPrimero = true;
+    while(aux != NULL){
+        //cout<<aux->getNombretarea()<<endl;
+        node_data += "Node" + to_string(counter) + "[label=\""
+                + "ID           : "+ to_string(aux->getIdError())
+                + "\\nTipo           : "+aux->getTipo()
+                + "\\nDescripcion        : "+aux->getDescripcion() + "\"];\n";
+        counter++;
+        aux = aux->getSiguiente();
+    }
+    graph += node_data;
+    counter=counter-1;
+    edge_data += "Inicio->Node" + to_string(counter) + ";\n";
+    while(counter!=0){
+        edge_data += "Node" + to_string(counter) + "->Node" + to_string(counter-1) + ";\n";
+        counter= counter-1;
+    }
+    edge_data += "Node0->Final" ";\n";
+
+    graph += edge_data;
+    graph += "\n}";
+    //-------------------------------------
+    try{
+        //Esta variable debe ser modificada para agregar su path de creacion de la Grafica
+
+        ofstream file;
+        file.open("QuintoReporte"+ to_string(contAr) +".dot", ios::out);
+
+        if(file.fail()){
+            exit(1);
+        }
+        file<<graph;
+        file.close();
+        string command = "dot -Tpng QuintoReporte"+ to_string(contAr) +".dot -o QuintoReporte"+ to_string(contAr) +".png";
+        system(command.c_str());
+        cout<<"****REPORTE DE ERRORES GENERADO CON EXITO****"<<endl;
+    }catch(exception e){
+        cout<<"Fallo detectado"<<endl;
+    }
+
+    contAr=contAr+1;
+}
+
 
 NodoCola *Cola::getCabeza() {
     return this->cabeza;

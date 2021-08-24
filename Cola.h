@@ -19,6 +19,7 @@ public:
     void encolar(int _idError, string _tipo, string _descripcion);
     NodoCola *desencolar();
     void imprimir();
+    void graficarCola();
 
     NodoCola *getCabeza();
     NodoCola *getUltimo();

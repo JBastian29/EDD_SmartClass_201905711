@@ -5,6 +5,7 @@
 #include "ListaDoble.h"
 #include "ListaDobleCircular.h"
 #include <regex>
+#include <fstream>
 
 ListaDoble ::ListaDoble() {
     setCabeza(NULL);
@@ -70,6 +71,59 @@ NodoDoble *ListaDoble::encontradoUpdate(int _indice) {
     }
     return false;
 }
+int contArchivos=0;
+void ListaDoble::graficarDoble() {
+    NodoDoble *aux= getCabeza();
+    string node_data = "";
+    string edge_data = "";
+    string graph = "digraph List {\nrankdir=LR;\nnode [shape = record, color=black, style=filled, fillcolor=antiquewhite1];\n";
+    int counter = 0;
+    while(aux != NULL){
+        //cout<<aux->getNombretarea()<<endl;
+        node_data += "Node" + to_string(counter) + "[label=\""
+                + "Id_Tarea            : "+ to_string(aux->getIdTarea()) + "\n"
+                + "\\nIndice           : "+aux->getIndice()
+                + "\\nCarnet           : "+aux->getCarnet()
+                + "\\nNombre de tarea  : "+aux->getNombretarea()
+                + "\\nDescripcion      : "+aux->getDescripcion()
+                + "\\nMateria          : "+aux->getMateria()
+                + "\\nFecha            : "+aux->getFecha()
+                + "\\nHora             : "+aux->getHora()
+                + "\\nEstado           : "+aux->getEstado() + "\"];\n";
+        if(aux->getAnterior()!=NULL){
+            edge_data += "Node" + to_string(counter-1) + "->Node" + to_string(counter) + ";\n";
+            edge_data += "Node" + to_string(counter) + "->Node" + to_string(counter-1) + ";\n";
+        }
+        counter++;
+        aux = aux->getSiguiente();
+    }
+    graph += node_data;
+    graph += edge_data;
+    graph += "\n}";
+    //-------------------------------------
+    try{
+        //Esta variable debe ser modificada para agregar su path de creacion de la Grafica
+
+        ofstream file;
+        file.open("SegundoReporte"+ to_string(contArchivos) +".dot", ios::out);
+
+        if(file.fail()){
+            exit(1);
+        }
+        file<<graph;
+        file.close();
+        string command = "dot -Tpng SegundoReporte"+ to_string(contArchivos) +".dot -o SegundoReporte"+ to_string(contArchivos) +".png";
+        system(command.c_str());
+        cout<<"****REPORTE DE TAREAS GENERADO CON EXITO****"<<endl;
+    }catch(exception e){
+        cout<<"Fallo detectado"<<endl;
+    }
+
+    contArchivos=contArchivos+1;
+    //-------------------------------------
+}
+
+
 
 bool ListaDoble::verificarMes(string _mes) {
     const regex pattern("^(0?[7-9]|1[01])$");

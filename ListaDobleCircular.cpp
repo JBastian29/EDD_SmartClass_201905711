@@ -1,6 +1,6 @@
 #include "ListaDobleCircular.h"
 #include<regex>
-
+#include <fstream>
 
 
 ListaDCircular::ListaDCircular() {          //CONSTRUCTOR
@@ -132,6 +132,61 @@ bool ListaDCircular::existeCarnet(string _carnet) {
     }
     return false;
 }
+
+int contArch=0;
+void ListaDCircular::graficarDobleCircular() {
+    NodoDobleCircular *aux= getCabeza();
+    string node_data = "";
+    string edge_data = "";
+    string graph = "digraph List {\nconcentrate=true;\nrankdir=LR;\nnode [shape = record, color=black, style=filled, fillcolor=antiquewhite1];\n";
+    int counter = 0;
+    bool casoPrimero = true;
+    while(aux != NULL &&  casoPrimero){
+        //cout<<aux->getNombretarea()<<endl;
+        node_data += "Node" + to_string(counter) + "[label=\""
+                + "Carnet           : "+aux->getnCarnet() + "\n"
+                + "\\nDPI           : "+aux->getnDPI()
+                + "\\nNombre        : "+aux->getNombre()
+                + "\\nCarrera       : "+aux->getCarrera()
+                + "\\nPassword      : "+aux->getPassword()
+                + "\\nCreditos      : "+to_string(aux->getCreditos())
+                + "\\nEdad          : "+to_string(aux->getEdad())+ "\"];\n";
+        if(!aux->getSiguiente()->getPrimero()){
+            edge_data += "Node" + to_string(counter) + "->Node" + to_string(counter+1) + "[dir=both];\n";
+        }if(aux->getSiguiente()->getPrimero()){
+            edge_data += "Node" + to_string(counter) + "->Node" + to_string(0) + "[dir=both];\n";
+            casoPrimero=false;
+            break;
+        }
+        counter++;
+        aux = aux->getSiguiente();
+    }
+    graph += node_data;
+    graph += edge_data;
+    graph += "\n}";
+    //-------------------------------------
+    try{
+        //Esta variable debe ser modificada para agregar su path de creacion de la Grafica
+
+        ofstream file;
+        file.open("PrimerReporte"+ to_string(contArch) +".dot", ios::out);
+
+        if(file.fail()){
+            exit(1);
+        }
+        file<<graph;
+        file.close();
+        string command = "dot -Tpng PrimerReporte"+ to_string(contArch) +".dot -o PrimerReporte"+ to_string(contArch) +".png";
+        system(command.c_str());
+        cout<<"****REPORTE DE ESTUDIANTES GENERADO CON EXITO****"<<endl;
+    }catch(exception e){
+        cout<<"Fallo detectado"<<endl;
+    }
+
+    contArch=contArch+1;
+}
+
+
 
 bool ListaDCircular::verificarCorreo(string _correo) {
     const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");

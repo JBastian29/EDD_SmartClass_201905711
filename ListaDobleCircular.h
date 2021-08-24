@@ -12,6 +12,7 @@ public:
                string _password, int _creditos, int _edad);
 
     void delNodo(string _nDPI);
+    void graficarDobleCircular();
 
     void imprimir();
 
