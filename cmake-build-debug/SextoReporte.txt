@@ -1,0 +1,85 @@
+¿Elements?
+	¿element type='user'?
+		¿item Carnet='201700886' $?
+		¿item Nombre='Emilia Miramontes' $?
+		¿item Carrera='Ingeniería en Ciencias y Sistemas' $?
+		¿item Password='roxodiciqi' $?
+		¿item Creditos='205' $?
+		¿item Edad='21' $?
+	¿$element?
+	¿element type='user'?
+		¿item Carnet='201822186' $?
+		¿item Nombre='Eloisa Rincón' $?
+		¿item Carrera='Ingeniería Civil' $?
+		¿item Password='toqelijanu' $?
+		¿item Creditos='95' $?
+		¿item Edad='19' $?
+	¿$element?
+	¿element type='user'?
+		¿item Carnet='201503186' $?
+		¿item Nombre='Manuel Manzanares' $?
+		¿item Carrera='Ingeniería Eléctrica' $?
+		¿item Password='rejumudore' $?
+		¿item Creditos='226' $?
+		¿item Edad='24' $?
+	¿$element?
+	¿element type='user'?
+		¿item Carnet='201123146' $?
+		¿item Nombre='Julia Corona' $?
+		¿item Carrera='Ingeniería Electrónica' $?
+		¿item Password='xojobavuji' $?
+		¿item Creditos='237' $?
+		¿item Edad='26' $?
+	¿$element?
+	¿element type='user'?
+		¿item Carnet='201704186' $?
+		¿item Nombre='Berta Carrasco' $?
+		¿item Carrera='Ingeniería Ambiental' $?
+		¿item Password='gayahizatu' $?
+		¿item Creditos='210' $?
+		¿item Edad='22' $?
+	¿$element?
+	¿element type='user'?
+		¿item Carnet='201611446' $?
+		¿item Nombre='Sonia Arteaga' $?
+		¿item Carrera='Ingeniería Mecánica Industrial' $?
+		¿item Password='rezutafila' $?
+		¿item Creditos='195' $?
+		¿item Edad='23' $?
+	¿$element?
+	¿element type='user'?
+		¿item Carnet='201819852' $?
+		¿item Nombre='Benjamín Asencio' $?
+		¿item Carrera='Ingeniería Mecánica Eléctrica' $?
+		¿item Password='runoqozepo' $?
+		¿item Creditos='117' $?
+		¿item Edad='20' $?
+	¿$element?
+	¿element type='task'?
+		¿item Carnet='201700886' $?
+		¿item DPI ='Codificar en C++' $?
+		¿item Nombre='Realizar la tarea del curso de Estructuras de datos' $?
+		¿item Carrera='Estructuras de Datos' $?
+		¿item Password='2021/07/14' $?
+		¿item Creditos='16' $?
+		¿item Edad='Pendiente' $?
+	¿$element?
+	¿element type='task'?
+		¿item Carnet='201704186' $?
+		¿item DPI ='Tarea 2 de Física 3' $?
+		¿item Nombre='Realizar la tarea del curso de Física 3.' $?
+		¿item Carrera='FÍsica 3' $?
+		¿item Password='2021/10/04' $?
+		¿item Creditos='11' $?
+		¿item Edad='Pendiente' $?
+	¿$element?
+	¿element type='task'?
+		¿item Carnet='201700886' $?
+		¿item DPI ='Proyecto de Lenguajes' $?
+		¿item Nombre='Realizar el proyecto del curso de Lenguajes' $?
+		¿item Carrera='Lenguajes Formales y de Programación' $?
+		¿item Password='2021/10/21' $?
+		¿item Creditos='13' $?
+		¿item Edad='Pendiente' $?
+	¿$element?
+¿$Elements?

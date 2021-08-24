@@ -946,7 +946,7 @@ void reportes(){
                                 reporte5();
                                 break;
                                 case 6:
-                                    //reporte6();
+                                    reporte6();
                                     break;
         }
     }
@@ -1016,5 +1016,23 @@ void reporte4(){
 void reporte5(){
     cout<<"******GENERANDO REPORTE DE ERRORES******"<<endl;
     colaErrores->graficarCola();
+    main();
+}
+
+void reporte6(){
+    cout<<"******GENERANDO REPORTE DE SALIDA******"<<endl;
+    string inicio="¿Elements?\n";
+    string usuarios=listaCircu->generarReporte();
+    string tareas=listaDoble->generarReporte();
+    string final="¿$Elements?";
+    ofstream salida;
+    salida.open("SextoReporte.txt",ios::out);
+    if(salida.fail()){
+        cout<<"Ocurrio un problema generando el archivo de salida..";
+    }else{
+        salida<<inicio+usuarios+tareas+final;
+        salida.close();
+        cout<<"***ARCHIVO DE SALIDA GENERADO CORRECTAMENTE***";
+    }
     main();
 }

@@ -13,6 +13,7 @@ public:
 
     void delNodo(string _nDPI);
     void graficarDobleCircular();
+    string generarReporte();
 
     void imprimir();
 

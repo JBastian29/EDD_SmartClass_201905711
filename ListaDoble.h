@@ -22,6 +22,7 @@ public:
 
     void delNodo(string _indice);
     void imprimir();
+    string generarReporte();
     NodoDoble *encontradoUpdate(int _indice);
 
     NodoDoble *getCabeza();

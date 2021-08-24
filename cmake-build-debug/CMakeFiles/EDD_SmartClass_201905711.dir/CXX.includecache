@@ -6,19 +6,61 @@
 
 #IncludeRegexTransform: 
 
-D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.cpp
-Cola.h
-D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h
-fstream
--
-
 D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h
 NodoCola.h
 D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.h
+
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.h
+NodoDoble.h
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.h
+
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.h
+NodoDobleCircular.h
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.h
 
 D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoCola.h
 iostream
 -
 string
+-
+
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDoble.h
+iostream
+-
+string
+-
+
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoDobleCircular.h
+iostream
+-
+string
+-
+
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.h
+iostream
+-
+string
+-
+
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/main.cpp
+iostream
+-
+string
+-
+ListaDobleCircular.h
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDobleCircular.h
+Cola.h
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/Cola.h
+NodoMatriz.h
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/NodoMatriz.h
+ListaDoble.h
+D:/Sebastian Julajuj/#USAC/GitHub/EDD_SmartClass/EDD_SmartClass_201905711/ListaDoble.h
+stdlib.h
+-
+sstream
+-
+fstream
+-
+filesystem
 -
 

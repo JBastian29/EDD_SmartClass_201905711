@@ -123,7 +123,24 @@ void ListaDoble::graficarDoble() {
     //-------------------------------------
 }
 
-
+string ListaDoble::generarReporte() {
+    NodoDoble *aux = getCabeza();
+    string todo = "";
+    string inicio = "\t¿element type='task'?\n";
+    string final  = "\t¿$element?\n";
+    while(aux != NULL){
+        string carnet = "\t\t¿item Carnet='"+aux->getCarnet()+"' $?\n";
+        string nombre = "\t\t¿item DPI ='"+aux->getNombretarea()+"' $?\n";
+        string descripcion = "\t\t¿item Nombre='"+aux->getDescripcion()+"' $?\n";
+        string materia = "\t\t¿item Carrera='"+aux->getMateria()+"' $?\n";
+        string fecha = "\t\t¿item Password='"+aux->getFecha()+"' $?\n";
+        string hora = "\t\t¿item Creditos='"+ aux->getHora()+"' $?\n";
+        string estado = "\t\t¿item Edad='"+ aux->getEstado()+"' $?\n";
+        todo += inicio+carnet+nombre+descripcion+materia+fecha+hora+estado+final;
+    aux=aux->getSiguiente();
+    }
+    return todo;
+}
 
 bool ListaDoble::verificarMes(string _mes) {
     const regex pattern("^(0?[7-9]|1[01])$");

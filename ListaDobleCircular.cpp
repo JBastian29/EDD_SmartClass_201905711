@@ -185,7 +185,26 @@ void ListaDCircular::graficarDobleCircular() {
 
     contArch=contArch+1;
 }
+string ListaDCircular::generarReporte() {
+    bool casoPrimero = true;
+    string todo = "";
+    string inicio = "\t¿element type='user'?\n";
+    string final  = "\t¿$element?\n";
+    for (NodoDobleCircular *actual = getCabeza(); actual != NULL && (casoPrimero || !actual->getPrimero()); actual = actual->getSiguiente()) {
+        casoPrimero = false;
+        string carnet = "\t\t¿item Carnet='"+actual->getnCarnet()+"' $?\n";
+        string dpi = "\t\t¿item DPI ='"+actual->getnDPI()+"' $?\n";
+        string nombre = "\t\t¿item Nombre='"+actual->getNombre()+"' $?\n";
+        string carrera = "\t\t¿item Carrera='"+actual->getCarrera()+"' $?\n";
+        string pass = "\t\t¿item Password='"+actual->getPassword()+"' $?\n";
+        string creditos = "\t\t¿item Creditos='"+ to_string(actual->getCreditos())+"' $?\n";
+        string edad = "\t\t¿item Edad='"+ to_string(actual->getEdad())+"' $?\n";
+        todo += inicio+carnet+nombre+carrera+pass+creditos+edad+final;
+    }
+    casoPrimero = true;
+    return todo;
 
+}
 
 
 bool ListaDCircular::verificarCorreo(string _correo) {
