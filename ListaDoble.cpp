@@ -39,6 +39,27 @@ void ListaDoble::add_f(int _id, string _indice, string _carnet, string _nombreTa
     }
 }*/
 
+void ListaDoble::delNodo(string _indice) {
+    if(getCabeza()->getIndice()==_indice){
+        setCabeza(getCabeza()->getSiguiente());
+        if(getCabeza()!=NULL){
+            getCabeza()->setAnterior(NULL);
+        }
+    }else{
+        NodoDoble *aux=getCabeza();
+        while(aux->getSiguiente()!=NULL){
+            if(aux->getSiguiente()->getIndice()==_indice){
+                aux->setSiguiente(aux->getSiguiente()->getSiguiente());
+                if(aux->getSiguiente()!=NULL){
+                    aux->getSiguiente()->setAnterior(aux);
+                }
+                break;
+            }
+            aux=aux->getSiguiente();
+        }
+    }
+}
+
 NodoDoble *ListaDoble::encontradoUpdate(int _indice) {
     NodoDoble *aux = getCabeza();
     while(aux!=NULL){

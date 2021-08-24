@@ -20,7 +20,7 @@ public:
                string _hora, string _estado);
     //void add_f(int _id, NodoMatriz *elementoMatriz);
 
-    void delNodo();
+    void delNodo(string _indice);
     void imprimir();
     NodoDoble *encontradoUpdate(int _indice);
 

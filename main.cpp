@@ -27,6 +27,7 @@ void ingresarTareas();
 void modificarTareas();
 void eliminarTareas();
 void imprimirUsuario(string carnet, string dpi, string nombre, string carrera, string correo, string password, int creditos, int edad);
+void imprimirTarea(string indice,string mes,string dia,string hora,string carnet,string nombre,string descripcion,string materia,string fecha,string estado);
 
 
 using namespace std;
@@ -122,9 +123,18 @@ void imprimirUsuario(string carnet, string dpi, string nombre, string carrera, s
     cout << "Correo   :" << correo << endl;
 }
 
-
-void menuPrincipal() {
-
+void imprimirTarea(string indice,string mes,string dia,string hora,string carnet,string nombre,string descripcion,string materia,string fecha,string estado){
+    cout << "==================" << endl;
+    cout << "Indice      :" << indice << endl;
+    cout << "Mes         :" << mes << endl;
+    cout << "Dia         :" << dia << endl;
+    cout << "Hora        :" << hora   << endl;
+    cout << "Carnet      :" << carnet << endl;
+    cout << "Nombre      :" << nombre << endl;
+    cout << "Descripcion :" << descripcion << endl;
+    cout << "Materia     :" << materia << endl;
+    cout << "Fecha       :" << fecha << endl;
+    cout << "Estado      :" << estado << endl;
 }
 
 
@@ -518,10 +528,10 @@ void menuTareas(){
                 ingresarTareas();
                 break;
                 case 2:
-                    //modificarTareas();
+                    modificarTareas();
                     break;
                     case 3:
-                        //eliminarTareas();
+                        eliminarTareas();
                         break;
                         case 4:
                             cout<<"Volviendo al menu anterior..."<<endl;
@@ -617,7 +627,9 @@ void ingresarTareas(){
 }
 
 void modificarTareas(){
-    string indice;
+    string  indice,mes,dia,hora,carnet,nombre,descripcion,materia,fecha,estado;
+    int posiI=0, posiJ=0,posiK=0;
+    bool siesta=false;
     cout<<"******MODIFICAR TAREAS******"<<endl;
     cout<<"Por favor ingresa el indice de la tarea a modificar: "<<endl;
     cin>>indice;
@@ -626,12 +638,277 @@ void modificarTareas(){
             for(int k=0;k<30;k++){
                 if(matrizT[i][k][j]!=NULL){
                     int indi2=listaDoble->calcularIndice(i,k,j);
-                    listaDoble->add_f(contaTareas, to_string(indi2),matrizT[i][k][j]->getCarnet(),matrizT[i][k][j]->getNombre(),
-                                      matrizT[i][k][j]->getDescripcion(), matrizT[i][k][j]->getMateria(),
-                                      matrizT[i][k][j]->getFecha(),to_string(listaDoble->horaGeneral(matrizT[i][k][j]->getHora())),matrizT[i][k][j]->getEstado());
-                    contaTareas=contaTareas+1;
+                    if(indi2 == stoi(indice) && listaDoble->encontradoUpdate(stoi(indice))){
+                        posiI=i;
+                        posiK=j;
+                        posiJ=k;
+                        siesta = true;
+                        break;
+                    }else{
+                        siesta=false;
+                    }
                 }
             }
+            if(siesta){
+                break;
+            }
         }
+        if(siesta){
+            break;
+        }
+    }
+    if(siesta){
+        int a;
+        do{
+            cout<<"******INDICE ENCONTRADO, QUE DESEAS MODIFICAR?******"<<endl;
+            cout<<"1-Mes"<<endl;
+            cout<<"2-Dia"<<endl;
+            cout<<"3-Hora"<<endl;
+            cout<<"4-Carnet"<<endl;
+            cout<<"5-Nombre"<<endl;
+            cout<<"6-Descripcion"<<endl;
+            cout<<"7-Materia"<<endl;
+            cout<<"8-Fecha"<<endl;
+            cout<<"9-Estado"<<endl;
+            cout<<"10-Salir"<<endl;
+            cin>>a;
+            switch (a) {
+                case 1:
+                    cout<<"Ingrese el nuevo MES:"<<endl;
+                    cin>>mes;
+                    if(listaDoble->verificarMes(mes) && !listaDoble->verificarIndiceExiste(to_string(listaDoble->calcularIndice(getIndexMes(mes),posiJ,posiK)))){
+                        matrizT[getIndexMes(mes)][posiJ][posiK]=new NodoMatriz(to_string(getIndexMes(mes)),
+                                                                                                                          matrizT[posiI][posiJ][posiK]->getDia(),
+                                                                                                                          matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                        matrizT[posiI][posiJ][posiK]=NULL;
+                        listaDoble = new ListaDoble();
+                        contaTareas = 0;
+                        for (int i=0;i<5;i++){  //[5][30][9]
+                            for(int j=0;j<9;j++){
+                                for(int k=0;k<30;k++){
+                                    if(matrizT[i][k][j]!=NULL){
+                                        int indi2=listaDoble->calcularIndice(i,k,j);
+                                        listaDoble->add_f(contaTareas, to_string(indi2),matrizT[i][k][j]->getCarnet(),matrizT[i][k][j]->getNombre(),
+                                                          matrizT[i][k][j]->getDescripcion(), matrizT[i][k][j]->getMateria(),
+                                                          matrizT[i][k][j]->getFecha(),to_string(listaDoble->horaGeneral(matrizT[i][k][j]->getHora())),matrizT[i][k][j]->getEstado());
+                                        contaTareas=contaTareas+1;
+                                    }
+                                }
+                            }
+                        }
+                        listaDoble->imprimir();
+                    }else if(!listaDoble->verificarMes(mes)){
+                        cout << "==================" << endl;
+                        cout<<"****MES fuera de rango, por favor revisa tus datos****"<<endl;
+                    }else if(listaDoble->verificarIndiceExiste(to_string(listaDoble->calcularIndice(getIndexMes(mes),posiJ,posiK)))){
+                        cout << "==================" << endl;
+                        cout<<"****INDICE ocupado, por favor revisa tus datos****"<<endl;
+                    }
+                    menuTareas();
+                    break;
+                case 2:
+                    cout<<"Ingrese el nuevo DIA:"<<endl;
+                    cin>>dia;
+                    if(listaDoble->verificarDia(dia) && !listaDoble->verificarIndiceExiste(to_string(listaDoble->calcularIndice(posiI,
+                                                                                                                                stoi(dia)-1,posiK)))){
+                        matrizT[posiI][stoi(dia)-1][posiK]=new NodoMatriz(matrizT[posiI][posiJ][posiK]->getMes(),
+                                                                          to_string(stoi(dia)-1),
+                                                                               matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                        matrizT[posiI][posiJ][posiK]=NULL;
+                        listaDoble = new ListaDoble();
+                        contaTareas = 0;
+                        for (int i=0;i<5;i++){  //[5][30][9]
+                            for(int j=0;j<9;j++){
+                                for(int k=0;k<30;k++){
+                                    if(matrizT[i][k][j]!=NULL){
+                                        int indi2=listaDoble->calcularIndice(i,k,j);
+                                        listaDoble->add_f(contaTareas, to_string(indi2),matrizT[i][k][j]->getCarnet(),matrizT[i][k][j]->getNombre(),
+                                                          matrizT[i][k][j]->getDescripcion(), matrizT[i][k][j]->getMateria(),
+                                                          matrizT[i][k][j]->getFecha(),to_string(listaDoble->horaGeneral(matrizT[i][k][j]->getHora())),matrizT[i][k][j]->getEstado());
+                                        contaTareas=contaTareas+1;
+                                    }
+                                }
+                            }
+                        }
+                        listaDoble->imprimir();
+                    }else if(!listaDoble->verificarDia(dia)){
+                        cout << "==================" << endl;
+                        cout<<"****DIA fuera de rango, por favor revisa tus datos****"<<endl;
+                    }else if(listaDoble->verificarIndiceExiste(to_string(listaDoble->calcularIndice(posiI,stoi(dia)-1,posiK)))){
+                        cout << "==================" << endl;
+                        cout<<"****INDICE ocupado, por favor revisa tus datos****"<<endl;
+                    }
+                    menuTareas();
+                    break;
+                case 3:
+                    cout<<"Ingrese la nueva HORA:"<<endl;
+                    cin>>hora;
+                    if(listaDoble->verificarHora(hora) && !listaDoble->verificarIndiceExiste(to_string(listaDoble->calcularIndice(posiI,
+                                                                                                                                posiJ,
+                                                                                                                                  getIndexHora(hora))))){
+                        matrizT[posiI][posiJ][getIndexHora(hora)]=new NodoMatriz(matrizT[posiI][posiJ][posiK]->getMes(),
+                                                                                 matrizT[posiI][posiJ][posiK]->getDia(),
+                                                                                 to_string(getIndexHora(hora)),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                        matrizT[posiI][posiJ][posiK]=NULL;
+                        listaDoble = new ListaDoble();
+                        contaTareas = 0;
+                        for (int i=0;i<5;i++){  //[5][30][9]
+                            for(int j=0;j<9;j++){
+                                for(int k=0;k<30;k++){
+                                    if(matrizT[i][k][j]!=NULL){
+                                        int indi2=listaDoble->calcularIndice(i,k,j);
+                                        listaDoble->add_f(contaTareas, to_string(indi2),matrizT[i][k][j]->getCarnet(),matrizT[i][k][j]->getNombre(),
+                                                          matrizT[i][k][j]->getDescripcion(), matrizT[i][k][j]->getMateria(),
+                                                          matrizT[i][k][j]->getFecha(),to_string(listaDoble->horaGeneral(matrizT[i][k][j]->getHora())),matrizT[i][k][j]->getEstado());
+                                        contaTareas=contaTareas+1;
+                                    }
+                                }
+                            }
+                        }
+                        listaDoble->imprimir();
+                    }else if(!listaDoble->verificarHora(hora)){
+                        cout << "==================" << endl;
+                        cout<<"****HORA fuera de rango, por favor revisa tus datos****"<<endl;
+                    }else if(listaDoble->verificarIndiceExiste(to_string(listaDoble->calcularIndice(posiI,posiJ,
+                                                                                                    getIndexHora(hora))))){
+                        cout << "==================" << endl;
+                        cout<<"****INDICE ocupado, por favor revisa tus datos****"<<endl;
+                    }
+                    menuTareas();
+                    break;
+                case 4:
+                    cout<<"Ingrese el nuevo CARNET:"<<endl;
+                    cin>>carnet;
+                    if(listaCircu->existeCarnet(carnet)){
+                        matrizT[posiI][posiJ][posiK]->setCarnet(carnet);
+                        listaDoble->encontradoUpdate(stoi(indice))->setCarnet(carnet);
+                        imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                    }else{
+                        cout << "==================" << endl;
+                        cout<<"****CARNET no registrado, por favor revisa tus datos****"<<endl;
+                    }
+                    menuTareas();
+                    break;
+                case 5:
+                    cout<<"Ingrese el nuevo NOMBRE:"<<endl;
+                    cin.ignore();
+                    getline(cin,nombre);
+                    matrizT[posiI][posiJ][posiK]->setNombre(nombre);
+                    listaDoble->encontradoUpdate(stoi(indice))->setNombretarea(nombre);
+                    imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                    menuTareas();
+                    break;
+                case 6:
+                    cout<<"Ingrese la nueva DESCRIPCION:"<<endl;
+                    cin.ignore();
+                    getline(cin,nombre);
+                    matrizT[posiI][posiJ][posiK]->setDescripcion(descripcion);
+                    listaDoble->encontradoUpdate(stoi(indice))->setDescripcion(descripcion);
+                    imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                    menuTareas();
+                    break;
+                case 7:
+                    cout<<"Ingrese la nueva MATERIA:"<<endl;
+                    cin.ignore();
+                    getline(cin,materia);
+                    matrizT[posiI][posiJ][posiK]->setMateria(materia);
+                    listaDoble->encontradoUpdate(stoi(indice))->setMateria(materia);
+                    imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                    menuTareas();
+                    break;
+                case 8:
+                    cout<<"Ingrese la nueva FECHA:"<<endl;
+                    cin>>fecha;
+                    if(listaDoble->verificarFecha(fecha)){
+                        matrizT[posiI][posiJ][posiK]->setFecha(fecha);
+                        listaDoble->encontradoUpdate(stoi(indice))->setFecha(fecha);
+                        imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                    }else{
+                        cout << "==================" << endl;
+                        cout<<"****FECHA con formato incorrecto, por favor revisa tus datos****"<<endl;
+                    }
+                    menuTareas();
+                    break;
+                case 9:
+                    cout<<"Ingrese el nuevo ESTADO:"<<endl;
+                    cin.ignore();
+                    getline(cin,estado);
+                    matrizT[posiI][posiJ][posiK]->setEstado(estado);
+                    listaDoble->encontradoUpdate(stoi(indice))->setEstado(estado);
+                    imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+                    menuTareas();
+                    break;
+                case 10:
+                    menuUsuarios();
+                    break;
+            }
+        }while(a!=10);
+    }else{
+        cout<<"****INDICE no encontrado, por favor revisa tus datos**** "<<endl;
+        menuUsuarios();
+    }
+}
+
+void eliminarTareas(){
+    string indice, desicion;
+    int posiI=0, posiJ=0,posiK=0;
+    bool siesta=false;
+    cout<<"******ELIMINAR TAREAS******"<<endl;
+    cout<<"Por favor ingresa el indice de la tarea a eliminar: "<<endl;
+    cin>>indice;
+    for (int i=0;i<5;i++){  //[5][30][9]
+        for(int j=0;j<9;j++){
+            for(int k=0;k<30;k++){
+                if(matrizT[i][k][j]!=NULL){
+                    int indi2=listaDoble->calcularIndice(i,k,j);
+                    if(indi2 == stoi(indice) && listaDoble->encontradoUpdate(stoi(indice))){
+                        posiI=i;
+                        posiK=j;
+                        posiJ=k;
+                        siesta = true;
+                        break;
+                    }else{
+                        siesta=false;
+                    }
+                }
+            }
+            if(siesta){
+                break;
+            }
+        }
+        if(siesta){
+            break;
+        }
+    }
+    if(siesta){
+        imprimirTarea(listaDoble->encontradoUpdate(stoi(indice))->getIndice(),matrizT[posiI][posiJ][posiK]->getMes(),matrizT[posiI][posiJ][posiK]->getDia(),matrizT[posiI][posiJ][posiK]->getHora(),matrizT[posiI][posiJ][posiK]->getCarnet(),matrizT[posiI][posiJ][posiK]->getNombre(),matrizT[posiI][posiJ][posiK]->getDescripcion(),matrizT[posiI][posiJ][posiK]->getMateria(),matrizT[posiI][posiJ][posiK]->getFecha(),matrizT[posiI][posiJ][posiK]->getEstado());
+        cout<<"TAREA ENCONTRADA, esta seguro que desea eliminarla?"<<endl;
+        cin>> desicion;
+        if(desicion == "si"){
+            matrizT[posiI][posiJ][posiK]=NULL;
+            listaDoble->delNodo(indice);
+            listaDoble = new ListaDoble();
+            contaTareas = 0;
+            for (int i=0;i<5;i++){  //[5][30][9]
+                for(int j=0;j<9;j++){
+                    for(int k=0;k<30;k++){
+                        if(matrizT[i][k][j]!=NULL){
+                            int indi2=listaDoble->calcularIndice(i,k,j);
+                            listaDoble->add_f(contaTareas, to_string(indi2),matrizT[i][k][j]->getCarnet(),matrizT[i][k][j]->getNombre(),
+                                              matrizT[i][k][j]->getDescripcion(), matrizT[i][k][j]->getMateria(),
+                                              matrizT[i][k][j]->getFecha(),to_string(listaDoble->horaGeneral(matrizT[i][k][j]->getHora())),matrizT[i][k][j]->getEstado());
+                            contaTareas=contaTareas+1;
+                        }
+                    }
+                }
+            }
+            listaDoble->imprimir();
+        }else{
+            menuUsuarios();
+        }
+    }else{
+        cout<<"****INDICE no encontrado, por favor revisa tus datos**** "<<endl;
+    }
+
 }
 
