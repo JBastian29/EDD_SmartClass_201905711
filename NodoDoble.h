@@ -23,11 +23,12 @@ private:
     string hora;
     string estado;
     string indice;
+    //NodoMatriz *elementoMatriz;
     NodoDoble *siguiente;
     NodoDoble *anterior;
 public:
-    NodoDoble(int _id,string _carnet, string _nombreTarea, string _descripcion, string _materia, string _fecha, string _hora, string _estado);
-
+    NodoDoble(int _id, string _indice,string _carnet, string _nombreTarea, string _descripcion, string _materia, string _fecha, string _hora, string _estado);
+    //NodoDoble(int _id, NodoMatriz *_elementoMatriz);
     //Getters
     int getIdTarea();
     string getCarnet();
@@ -38,6 +39,7 @@ public:
     string getHora();
     string getEstado();
     string getIndice();
+    //NodoMatriz *getElementodeMatriz();
     NodoDoble *getSiguiente();
     NodoDoble *getAnterior();
 
@@ -53,5 +55,6 @@ public:
     void setIndice(string _indice);
     void setSiguiente(NodoDoble *_siguiente);
     void setAnterior(NodoDoble *_anterior);
+    //void setElementdeMatriz(NodoMatriz *_elementoMatriz);
 
 };

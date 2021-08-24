@@ -119,9 +119,14 @@ bool ListaDCircular::verificarCarnet(string _carnet) {
 
 bool ListaDCircular::existeCarnet(string _carnet) {
     NodoDobleCircular *aux=getCabeza();
-    while(aux!=NULL){
+    bool casoPrimero = true;
+    while(aux!=NULL && (casoPrimero || !aux->getPrimero())){
         if(aux->getnCarnet()==_carnet){
+            //ENCONTRADO
+            casoPrimero=false;
             return true;
+        }else if(aux->getPrimero()){
+            casoPrimero=false;
         }
         aux=aux->getSiguiente();
     }

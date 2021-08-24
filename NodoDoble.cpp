@@ -4,9 +4,10 @@
 
 #include "NodoDoble.h"
 
-NodoDoble ::NodoDoble(int _id, string _carnet, string _nombreTarea, string _descripcion, string _materia, string _fecha,
+NodoDoble ::NodoDoble(int _id, string _indice , string _carnet, string _nombreTarea, string _descripcion, string _materia, string _fecha,
                       string _hora, string _estado) {
     this->idTarea=_id;
+    this->indice=_indice;
     this->carnet=_carnet;
     this->nombreTarea=_nombreTarea;
     this->descripcion=_descripcion;
@@ -17,6 +18,11 @@ NodoDoble ::NodoDoble(int _id, string _carnet, string _nombreTarea, string _desc
     this->siguiente=NULL;
     this->anterior=NULL;
 }
+
+/*NodoDoble ::NodoDoble(int _id, NodoMatriz *elementoMatriz) {
+    this->idTarea=_id;
+    this->elementoMatriz=elementoMatriz;
+}*/
 
 int NodoDoble::getIdTarea() {
     return this->idTarea;
@@ -42,12 +48,19 @@ string NodoDoble::getHora() {
 string NodoDoble::getEstado() {
     return this->estado;
 }
+string NodoDoble::getIndice() {
+    return this->indice;
+}
 NodoDoble *NodoDoble::getSiguiente() {
     return this->siguiente;
 }
 NodoDoble *NodoDoble::getAnterior() {
     return this->anterior;
 }
+/*NodoMatriz *NodoDoble::getElementodeMatriz() {
+    return this->elementoMatriz;
+}*/
+
 
 void NodoDoble::setIdTarea(int _ID) {
     this->idTarea=_ID;
@@ -73,9 +86,15 @@ void NodoDoble::setHora(string _hora) {
 void NodoDoble::setEstado(string _estado) {
     this->estado=_estado;
 }
+void NodoDoble::setIndice(string _indice) {
+    this->indice=_indice;
+}
 void NodoDoble::setSiguiente(NodoDoble *_siguiente) {
     this->siguiente=_siguiente;
 }
 void NodoDoble::setAnterior(NodoDoble *_anterior) {
     this->anterior=_anterior;
 }
+/*void NodoDoble::setElementdeMatriz(NodoMatriz *_elementoMatriz) {
+    this->elementoMatriz=_elementoMatriz;
+}*/
